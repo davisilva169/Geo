@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title"><title id="title">Marcador de descoberta</title>
+  <rect width="256" height="256" rx="52" fill="#7138DC"/>
+  <path d="M128 36c-45 0-80 35-80 78 0 52 52 99 80 119 28-20 80-67 80-119 0-43-35-78-80-78z" fill="#FFFFFF"/>
+  <circle cx="128" cy="115" r="39" fill="#42D6BE"/>
+  <path d="M128 77c-13 12-19 24-19 38s6 26 19 39M128 77c13 12 19 24 19 38s-6 26-19 39M90 115h76" fill="none" stroke="#7138DC" stroke-width="6" stroke-linecap="round"/>
+</svg>

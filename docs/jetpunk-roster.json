@@ -1,0 +1,988 @@
+{
+  "source": "https://www.jetpunk.com/user-quizzes/176134/bandeiras-do-mundo/stats",
+  "checked": "2026-10-09",
+  "method": "Observed indexed statistics page using web retrieval; direct HTTP and reference image downloads return 403.",
+  "count": 196,
+  "answers": [
+    {
+      "id": "us",
+      "referenceName": "Estados Unidos",
+      "correctPercent": 99
+    },
+    {
+      "id": "gb",
+      "referenceName": "Reino Unido",
+      "correctPercent": 95
+    },
+    {
+      "id": "ca",
+      "referenceName": "Canadá",
+      "correctPercent": 94
+    },
+    {
+      "id": "au",
+      "referenceName": "Austrália",
+      "correctPercent": 93
+    },
+    {
+      "id": "fr",
+      "referenceName": "França",
+      "correctPercent": 92
+    },
+    {
+      "id": "it",
+      "referenceName": "Itália",
+      "correctPercent": 92
+    },
+    {
+      "id": "ru",
+      "referenceName": "Rússia",
+      "correctPercent": 89
+    },
+    {
+      "id": "br",
+      "referenceName": "Brasil",
+      "correctPercent": 87
+    },
+    {
+      "id": "kr",
+      "referenceName": "Coréia do Sul",
+      "correctPercent": 87
+    },
+    {
+      "id": "jp",
+      "referenceName": "Japão",
+      "correctPercent": 87
+    },
+    {
+      "id": "nl",
+      "referenceName": "Países Baixos",
+      "correctPercent": 85
+    },
+    {
+      "id": "nz",
+      "referenceName": "Nova Zelândia",
+      "correctPercent": 84
+    },
+    {
+      "id": "cn",
+      "referenceName": "China",
+      "correctPercent": 83
+    },
+    {
+      "id": "ie",
+      "referenceName": "Irlanda",
+      "correctPercent": 83
+    },
+    {
+      "id": "ch",
+      "referenceName": "Suíça",
+      "correctPercent": 81
+    },
+    {
+      "id": "es",
+      "referenceName": "Espanha",
+      "correctPercent": 80
+    },
+    {
+      "id": "gr",
+      "referenceName": "Grécia",
+      "correctPercent": 80
+    },
+    {
+      "id": "il",
+      "referenceName": "Israel",
+      "correctPercent": 80
+    },
+    {
+      "id": "de",
+      "referenceName": "Alemanha",
+      "correctPercent": 79
+    },
+    {
+      "id": "se",
+      "referenceName": "Suécia",
+      "correctPercent": 79
+    },
+    {
+      "id": "ar",
+      "referenceName": "Argentina",
+      "correctPercent": 78
+    },
+    {
+      "id": "be",
+      "referenceName": "Bélgica",
+      "correctPercent": 78
+    },
+    {
+      "id": "mx",
+      "referenceName": "México",
+      "correctPercent": 78
+    },
+    {
+      "id": "tr",
+      "referenceName": "Turquia",
+      "correctPercent": 78
+    },
+    {
+      "id": "za",
+      "referenceName": "África do Sul",
+      "correctPercent": 77
+    },
+    {
+      "id": "fi",
+      "referenceName": "Finlândia",
+      "correctPercent": 76
+    },
+    {
+      "id": "in",
+      "referenceName": "Índia",
+      "correctPercent": 76
+    },
+    {
+      "id": "no",
+      "referenceName": "Noruega",
+      "correctPercent": 76
+    },
+    {
+      "id": "jm",
+      "referenceName": "Jamaica",
+      "correctPercent": 75
+    },
+    {
+      "id": "uy",
+      "referenceName": "Uruguai",
+      "correctPercent": 75
+    },
+    {
+      "id": "sa",
+      "referenceName": "Arábia Saudita",
+      "correctPercent": 73
+    },
+    {
+      "id": "dk",
+      "referenceName": "Dinamarca",
+      "correctPercent": 73
+    },
+    {
+      "id": "pl",
+      "referenceName": "Polônia",
+      "correctPercent": 71
+    },
+    {
+      "id": "ci",
+      "referenceName": "Costa do Marfim",
+      "correctPercent": 70
+    },
+    {
+      "id": "eg",
+      "referenceName": "Egito",
+      "correctPercent": 70
+    },
+    {
+      "id": "hr",
+      "referenceName": "Croácia",
+      "correctPercent": 68
+    },
+    {
+      "id": "cm",
+      "referenceName": "Camarões",
+      "correctPercent": 67
+    },
+    {
+      "id": "cy",
+      "referenceName": "Chipre",
+      "correctPercent": 67
+    },
+    {
+      "id": "pt",
+      "referenceName": "Portugal",
+      "correctPercent": 67
+    },
+    {
+      "id": "ve",
+      "referenceName": "Venezuela",
+      "correctPercent": 67
+    },
+    {
+      "id": "cl",
+      "referenceName": "Chile",
+      "correctPercent": 66
+    },
+    {
+      "id": "np",
+      "referenceName": "Nepal",
+      "correctPercent": 66
+    },
+    {
+      "id": "al",
+      "referenceName": "Albânia",
+      "correctPercent": 65
+    },
+    {
+      "id": "tn",
+      "referenceName": "Tunísia",
+      "correctPercent": 65
+    },
+    {
+      "id": "va",
+      "referenceName": "Vaticano",
+      "correctPercent": 65
+    },
+    {
+      "id": "ge",
+      "referenceName": "Geórgia",
+      "correctPercent": 64
+    },
+    {
+      "id": "is",
+      "referenceName": "Islândia",
+      "correctPercent": 64
+    },
+    {
+      "id": "hu",
+      "referenceName": "Hungria",
+      "correctPercent": 63
+    },
+    {
+      "id": "bd",
+      "referenceName": "Bangladesh",
+      "correctPercent": 62
+    },
+    {
+      "id": "bg",
+      "referenceName": "Bulgária",
+      "correctPercent": 62
+    },
+    {
+      "id": "kp",
+      "referenceName": "Coréia do Norte",
+      "correctPercent": 62
+    },
+    {
+      "id": "lb",
+      "referenceName": "Líbano",
+      "correctPercent": 62
+    },
+    {
+      "id": "vn",
+      "referenceName": "Vietname",
+      "correctPercent": 62
+    },
+    {
+      "id": "ir",
+      "referenceName": "Irão",
+      "correctPercent": 61
+    },
+    {
+      "id": "pa",
+      "referenceName": "Panamá",
+      "correctPercent": 61
+    },
+    {
+      "id": "cu",
+      "referenceName": "Cuba",
+      "correctPercent": 60
+    },
+    {
+      "id": "ao",
+      "referenceName": "Angola",
+      "correctPercent": 58
+    },
+    {
+      "id": "dz",
+      "referenceName": "Argélia",
+      "correctPercent": 58
+    },
+    {
+      "id": "at",
+      "referenceName": "Áustria",
+      "correctPercent": 58
+    },
+    {
+      "id": "pe",
+      "referenceName": "Peru",
+      "correctPercent": 58
+    },
+    {
+      "id": "bt",
+      "referenceName": "Butão",
+      "correctPercent": 57
+    },
+    {
+      "id": "mk",
+      "referenceName": "Macedónia do Norte",
+      "correctPercent": 57
+    },
+    {
+      "id": "ma",
+      "referenceName": "Marrocos",
+      "correctPercent": 57
+    },
+    {
+      "id": "co",
+      "referenceName": "Colômbia",
+      "correctPercent": 56
+    },
+    {
+      "id": "mt",
+      "referenceName": "Malta",
+      "correctPercent": 56
+    },
+    {
+      "id": "rs",
+      "referenceName": "Sérvia",
+      "correctPercent": 56
+    },
+    {
+      "id": "do",
+      "referenceName": "República Dominicana",
+      "correctPercent": 55
+    },
+    {
+      "id": "qa",
+      "referenceName": "Catar",
+      "correctPercent": 54
+    },
+    {
+      "id": "iq",
+      "referenceName": "Iraque",
+      "correctPercent": 54
+    },
+    {
+      "id": "xk",
+      "referenceName": "Kosovo",
+      "correctPercent": 54
+    },
+    {
+      "id": "pk",
+      "referenceName": "Paquistão",
+      "correctPercent": 54
+    },
+    {
+      "id": "cz",
+      "referenceName": "República Checa",
+      "correctPercent": 54
+    },
+    {
+      "id": "ec",
+      "referenceName": "Equador",
+      "correctPercent": 53
+    },
+    {
+      "id": "id",
+      "referenceName": "Indonésia",
+      "correctPercent": 52
+    },
+    {
+      "id": "py",
+      "referenceName": "Paraguai",
+      "correctPercent": 52
+    },
+    {
+      "id": "bb",
+      "referenceName": "Barbados",
+      "correctPercent": 51
+    },
+    {
+      "id": "sk",
+      "referenceName": "Eslováquia",
+      "correctPercent": 51
+    },
+    {
+      "id": "my",
+      "referenceName": "Malásia",
+      "correctPercent": 51
+    },
+    {
+      "id": "sm",
+      "referenceName": "San Marino",
+      "correctPercent": 51
+    },
+    {
+      "id": "ua",
+      "referenceName": "Ucrânia",
+      "correctPercent": 51
+    },
+    {
+      "id": "ba",
+      "referenceName": "Bósnia e Herzegovina",
+      "correctPercent": 50
+    },
+    {
+      "id": "si",
+      "referenceName": "Eslovénia",
+      "correctPercent": 49
+    },
+    {
+      "id": "ph",
+      "referenceName": "Filipinas",
+      "correctPercent": 49
+    },
+    {
+      "id": "hn",
+      "referenceName": "Honduras",
+      "correctPercent": 48
+    },
+    {
+      "id": "sn",
+      "referenceName": "Senegal",
+      "correctPercent": 48
+    },
+    {
+      "id": "mg",
+      "referenceName": "Madagáscar",
+      "correctPercent": 47
+    },
+    {
+      "id": "mc",
+      "referenceName": "Mônaco",
+      "correctPercent": 47
+    },
+    {
+      "id": "ng",
+      "referenceName": "Nigéria",
+      "correctPercent": 47
+    },
+    {
+      "id": "ke",
+      "referenceName": "Quênia",
+      "correctPercent": 47
+    },
+    {
+      "id": "sg",
+      "referenceName": "Singapura",
+      "correctPercent": 47
+    },
+    {
+      "id": "pw",
+      "referenceName": "Palau",
+      "correctPercent": 46
+    },
+    {
+      "id": "ro",
+      "referenceName": "Romênia",
+      "correctPercent": 46
+    },
+    {
+      "id": "sy",
+      "referenceName": "Síria",
+      "correctPercent": 46
+    },
+    {
+      "id": "kz",
+      "referenceName": "Cazaquistão",
+      "correctPercent": 45
+    },
+    {
+      "id": "cd",
+      "referenceName": "República Democrática do Congo",
+      "correctPercent": 45
+    },
+    {
+      "id": "pg",
+      "referenceName": "Papua Nova Guiné",
+      "correctPercent": 44
+    },
+    {
+      "id": "ae",
+      "referenceName": "Emirados Árabes Unidos",
+      "correctPercent": 43
+    },
+    {
+      "id": "lu",
+      "referenceName": "Luxemburgo",
+      "correctPercent": 43
+    },
+    {
+      "id": "th",
+      "referenceName": "Tailândia",
+      "correctPercent": 43
+    },
+    {
+      "id": "cr",
+      "referenceName": "Costa Rica",
+      "correctPercent": 42
+    },
+    {
+      "id": "ne",
+      "referenceName": "Níger",
+      "correctPercent": 42
+    },
+    {
+      "id": "ee",
+      "referenceName": "Estônia",
+      "correctPercent": 41
+    },
+    {
+      "id": "gh",
+      "referenceName": "Gana",
+      "correctPercent": 41
+    },
+    {
+      "id": "az",
+      "referenceName": "Azerbaijão",
+      "correctPercent": 40
+    },
+    {
+      "id": "mz",
+      "referenceName": "Moçambique",
+      "correctPercent": 40
+    },
+    {
+      "id": "tw",
+      "referenceName": "Taiwan",
+      "correctPercent": 39
+    },
+    {
+      "id": "bf",
+      "referenceName": "Burkina Faso",
+      "correctPercent": 38
+    },
+    {
+      "id": "ga",
+      "referenceName": "Gabão",
+      "correctPercent": 38
+    },
+    {
+      "id": "lk",
+      "referenceName": "Sri Lanka",
+      "correctPercent": 38
+    },
+    {
+      "id": "ht",
+      "referenceName": "Haiti",
+      "correctPercent": 37
+    },
+    {
+      "id": "by",
+      "referenceName": "Bielorrússia",
+      "correctPercent": 36
+    },
+    {
+      "id": "jo",
+      "referenceName": "Jordânia",
+      "correctPercent": 36
+    },
+    {
+      "id": "to",
+      "referenceName": "Tonga",
+      "correctPercent": 36
+    },
+    {
+      "id": "tt",
+      "referenceName": "Trinidad e Tobago",
+      "correctPercent": 36
+    },
+    {
+      "id": "uz",
+      "referenceName": "Uzbequistão",
+      "correctPercent": 36
+    },
+    {
+      "id": "cv",
+      "referenceName": "Cabo Verde",
+      "correctPercent": 35
+    },
+    {
+      "id": "kh",
+      "referenceName": "Camboja",
+      "correctPercent": 35
+    },
+    {
+      "id": "sv",
+      "referenceName": "El Salvador",
+      "correctPercent": 35
+    },
+    {
+      "id": "et",
+      "referenceName": "Etiópia",
+      "correctPercent": 35
+    },
+    {
+      "id": "om",
+      "referenceName": "Omã",
+      "correctPercent": 35
+    },
+    {
+      "id": "sc",
+      "referenceName": "Seychelles",
+      "correctPercent": 35
+    },
+    {
+      "id": "so",
+      "referenceName": "Somália",
+      "correctPercent": 35
+    },
+    {
+      "id": "mv",
+      "referenceName": "Maldivas",
+      "correctPercent": 34
+    },
+    {
+      "id": "ni",
+      "referenceName": "Nicarágua",
+      "correctPercent": 34
+    },
+    {
+      "id": "mm",
+      "referenceName": "Birmânia",
+      "correctPercent": 33
+    },
+    {
+      "id": "la",
+      "referenceName": "Laos",
+      "correctPercent": 33
+    },
+    {
+      "id": "ug",
+      "referenceName": "Uganda",
+      "correctPercent": 33
+    },
+    {
+      "id": "bs",
+      "referenceName": "Bahamas",
+      "correctPercent": 32
+    },
+    {
+      "id": "ye",
+      "referenceName": "Iémen",
+      "correctPercent": 32
+    },
+    {
+      "id": "tm",
+      "referenceName": "Turquemenistão",
+      "correctPercent": 32
+    },
+    {
+      "id": "bh",
+      "referenceName": "Bahrein",
+      "correctPercent": 31
+    },
+    {
+      "id": "bn",
+      "referenceName": "Brunei",
+      "correctPercent": 31
+    },
+    {
+      "id": "fm",
+      "referenceName": "Estados Federados da Micronésia",
+      "correctPercent": 31
+    },
+    {
+      "id": "kw",
+      "referenceName": "Kuweit",
+      "correctPercent": 31
+    },
+    {
+      "id": "ly",
+      "referenceName": "Líbia",
+      "correctPercent": 31
+    },
+    {
+      "id": "mr",
+      "referenceName": "Mauritânia",
+      "correctPercent": 31
+    },
+    {
+      "id": "af",
+      "referenceName": "Afeganistão",
+      "correctPercent": 30
+    },
+    {
+      "id": "ad",
+      "referenceName": "Andorra",
+      "correctPercent": 30
+    },
+    {
+      "id": "ag",
+      "referenceName": "Antígua e Barbuda",
+      "correctPercent": 30
+    },
+    {
+      "id": "me",
+      "referenceName": "Montenegro",
+      "correctPercent": 30
+    },
+    {
+      "id": "sz",
+      "referenceName": "Suazilândia",
+      "correctPercent": 30
+    },
+    {
+      "id": "lv",
+      "referenceName": "Letónia",
+      "correctPercent": 29
+    },
+    {
+      "id": "lr",
+      "referenceName": "Libéria",
+      "correctPercent": 29
+    },
+    {
+      "id": "mn",
+      "referenceName": "Mongólia",
+      "correctPercent": 29
+    },
+    {
+      "id": "ss",
+      "referenceName": "Sudão do Sul",
+      "correctPercent": 29
+    },
+    {
+      "id": "am",
+      "referenceName": "Armênia",
+      "correctPercent": 28
+    },
+    {
+      "id": "td",
+      "referenceName": "Chade",
+      "correctPercent": 28
+    },
+    {
+      "id": "gy",
+      "referenceName": "Guiana",
+      "correctPercent": 28
+    },
+    {
+      "id": "li",
+      "referenceName": "Liechtenstein",
+      "correctPercent": 28
+    },
+    {
+      "id": "sr",
+      "referenceName": "Suriname",
+      "correctPercent": 28
+    },
+    {
+      "id": "bz",
+      "referenceName": "Belize",
+      "correctPercent": 27
+    },
+    {
+      "id": "bw",
+      "referenceName": "Botswana",
+      "correctPercent": 27
+    },
+    {
+      "id": "fj",
+      "referenceName": "Fiji",
+      "correctPercent": 27
+    },
+    {
+      "id": "gt",
+      "referenceName": "Guatemala",
+      "correctPercent": 27
+    },
+    {
+      "id": "mh",
+      "referenceName": "Ilhas Marshall",
+      "correctPercent": 27
+    },
+    {
+      "id": "mw",
+      "referenceName": "Malawi",
+      "correctPercent": 27
+    },
+    {
+      "id": "tz",
+      "referenceName": "Tanzânia",
+      "correctPercent": 27
+    },
+    {
+      "id": "bo",
+      "referenceName": "Bolívia",
+      "correctPercent": 26
+    },
+    {
+      "id": "km",
+      "referenceName": "Comores",
+      "correctPercent": 26
+    },
+    {
+      "id": "ki",
+      "referenceName": "Kiribati",
+      "correctPercent": 26
+    },
+    {
+      "id": "lt",
+      "referenceName": "Lituânia",
+      "correctPercent": 26
+    },
+    {
+      "id": "md",
+      "referenceName": "Moldávia",
+      "correctPercent": 26
+    },
+    {
+      "id": "tl",
+      "referenceName": "Timor Leste",
+      "correctPercent": 26
+    },
+    {
+      "id": "ml",
+      "referenceName": "Mali",
+      "correctPercent": 25
+    },
+    {
+      "id": "cg",
+      "referenceName": "República do Congo",
+      "correctPercent": 25
+    },
+    {
+      "id": "sd",
+      "referenceName": "Sudão",
+      "correctPercent": 25
+    },
+    {
+      "id": "tj",
+      "referenceName": "Tajiquistão",
+      "correctPercent": 25
+    },
+    {
+      "id": "zw",
+      "referenceName": "Zimbábue",
+      "correctPercent": 25
+    },
+    {
+      "id": "gd",
+      "referenceName": "Granada",
+      "correctPercent": 24
+    },
+    {
+      "id": "kg",
+      "referenceName": "Quirguistão",
+      "correctPercent": 24
+    },
+    {
+      "id": "bi",
+      "referenceName": "Burundi",
+      "correctPercent": 23
+    },
+    {
+      "id": "er",
+      "referenceName": "Eritreia",
+      "correctPercent": 23
+    },
+    {
+      "id": "lc",
+      "referenceName": "Santa Lúcia",
+      "correctPercent": 23
+    },
+    {
+      "id": "tg",
+      "referenceName": "Togo",
+      "correctPercent": 23
+    },
+    {
+      "id": "zm",
+      "referenceName": "Zâmbia",
+      "correctPercent": 23
+    },
+    {
+      "id": "dm",
+      "referenceName": "Dominica",
+      "correctPercent": 22
+    },
+    {
+      "id": "ls",
+      "referenceName": "Lesoto",
+      "correctPercent": 22
+    },
+    {
+      "id": "nr",
+      "referenceName": "Nauru",
+      "correctPercent": 22
+    },
+    {
+      "id": "rw",
+      "referenceName": "Ruanda",
+      "correctPercent": 22
+    },
+    {
+      "id": "ws",
+      "referenceName": "Samoa",
+      "correctPercent": 22
+    },
+    {
+      "id": "gq",
+      "referenceName": "Guiné Equatorial",
+      "correctPercent": 21
+    },
+    {
+      "id": "na",
+      "referenceName": "Namíbia",
+      "correctPercent": 21
+    },
+    {
+      "id": "sl",
+      "referenceName": "Serra Leoa",
+      "correctPercent": 21
+    },
+    {
+      "id": "dj",
+      "referenceName": "Djibouti",
+      "correctPercent": 20
+    },
+    {
+      "id": "gn",
+      "referenceName": "Guiné",
+      "correctPercent": 20
+    },
+    {
+      "id": "cf",
+      "referenceName": "República Centro-Africana",
+      "correctPercent": 20
+    },
+    {
+      "id": "st",
+      "referenceName": "São Tomé e Príncipe",
+      "correctPercent": 20
+    },
+    {
+      "id": "vu",
+      "referenceName": "Vanuatu",
+      "correctPercent": 20
+    },
+    {
+      "id": "kn",
+      "referenceName": "São Cristóvão e Nevis",
+      "correctPercent": 19
+    },
+    {
+      "id": "mu",
+      "referenceName": "Maurícia",
+      "correctPercent": 18
+    },
+    {
+      "id": "vc",
+      "referenceName": "São Vicente e Granadinas",
+      "correctPercent": 18
+    },
+    {
+      "id": "bj",
+      "referenceName": "Benim",
+      "correctPercent": 17
+    },
+    {
+      "id": "gw",
+      "referenceName": "Guiné-Bissau",
+      "correctPercent": 17
+    },
+    {
+      "id": "tv",
+      "referenceName": "Tuvalu",
+      "correctPercent": 17
+    },
+    {
+      "id": "gm",
+      "referenceName": "Gâmbia",
+      "correctPercent": 15
+    },
+    {
+      "id": "sb",
+      "referenceName": "Ilhas Salomão",
+      "correctPercent": 15
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geo · Ícones minimalistas</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 32px; background: #f7f5fb; color: #251b39; font: 16px/1.5 Arial, sans-serif; }
+      main { max-width: 1050px; margin: auto; }
+      h1 { margin: 0 0 4px; font-size: 30px; }
+      p { margin: 0 0 28px; color: #6f687b; }
+      .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+      article { padding: 18px; border: 1px solid #e9e3f0; border-radius: 18px; background: white; }
+      article > img { display: block; width: 100%; aspect-ratio: 1; }
+      h2 { margin: 14px 0 6px; font-size: 16px; }
+      .small { display: flex; align-items: center; gap: 10px; color: #6f687b; font-size: 13px; }
+      .small img { width: 36px; height: 36px; }
+      @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 480px) { body { padding: 18px; } .grid { gap: 10px; } article { padding: 10px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Geo · ícones minimalistas</h1>
+      <p>Oito símbolos originais, em estilo flat. Cada cartão também mostra o ícone em tamanho pequeno.</p>
+      <div class="grid">
+        <article><img src="01-globo-bandeira.svg" alt="Globo e bandeira" /><h2>01 · Globo + bandeira</h2><div class="small"><img src="01-globo-bandeira.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="02-bandeira.svg" alt="Bandeira simples" /><h2>02 · Bandeira</h2><div class="small"><img src="02-bandeira.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="03-pin.svg" alt="Marcador de descoberta" /><h2>03 · Marcador</h2><div class="small"><img src="03-pin.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="04-g.svg" alt="Letra G" /><h2>04 · Letra G</h2><div class="small"><img src="04-g.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="05-bussola.svg" alt="Bússola" /><h2>05 · Bússola</h2><div class="small"><img src="05-bussola.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="06-cartas.svg" alt="Cartas de bandeiras" /><h2>06 · Cartas</h2><div class="small"><img src="06-cartas.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="07-mapa.svg" alt="Mapa dobrado" /><h2>07 · Mapa</h2><div class="small"><img src="07-mapa.svg" alt="" />Prévia pequena</div></article>
+        <article><img src="08-alvo.svg" alt="Alvo de bandeiras" /><h2>08 · Alvo</h2><div class="small"><img src="08-alvo.svg" alt="" />Prévia pequena</div></article>
+      </div>
+    </main>
+  </body>
+</html>

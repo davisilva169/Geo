@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+    <title id="title">Olho turquesa com globo e marcador</title>
+    <defs><clipPath id="globe"><circle r="100"/></clipPath></defs>
+    <rect width="256" height="256" rx="50" fill="#E8F6F1"/>
+    <path d="M23 128c32-45 69-66 105-66s73 21 105 66c-32 45-69 66-105 66S55 173 23 128z" fill="#FFFFFF"/>
+      <path d="M23 128c32-45 69-66 105-66s73 21 105 66" fill="none" stroke="#147D80" stroke-width="15" stroke-linecap="round"/>
+      <path d="M23 128c32 45 69 66 105 66s73-21 105-66" fill="none" stroke="#147D80" stroke-width="15" stroke-linecap="round"/>
+
+    <circle cx="128" cy="128" r="49" fill="#378EBE"/>
+    <g transform="translate(128 128) scale(.49)" clip-path="url(#globe)" fill="#91D56D">
+      <path d="M-96-41c20-24 43-26 65-22l15 19-21 13-3 19-20 14-9 25-20-15-15-23z"/>
+      <path d="M-56 13c17-13 37-12 47 2l-8 22-14 18-9 30-16 11-11-27 9-27z"/>
+      <path d="M-3-68c30-20 66-19 91 4l13 31-25 10-17-13-22 9-18 17-29-14-17-19z"/>
+      <path d="M16-12c23-10 43 3 44 23L43 57 20 76 3 38 2 8z"/>
+    </g>
+      <g transform="translate(155 98) scale(0.2)">
+    <path d="M0-56c-25 0-45 19-45 44 0 28 27 56 45 76 18-20 45-48 45-76 0-25-20-44-45-44z" fill="#F1B94E"/>
+    <circle cy="-12" r="15" fill="#FFFFFF"/>
+  </g>
+  </svg>

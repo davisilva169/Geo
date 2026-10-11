@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title"><title id="title">Alvo de bandeiras</title>
+  <rect width="256" height="256" rx="52" fill="#7138DC"/>
+  <circle cx="128" cy="128" r="83" fill="#FFFFFF"/>
+  <circle cx="128" cy="128" r="56" fill="#7138DC"/>
+  <circle cx="128" cy="128" r="30" fill="#42D6BE"/>
+  <path d="M124 101v56" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M128 104h31l-7 11 7 11h-31z" fill="#FFFFFF"/>
+</svg>

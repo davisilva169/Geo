@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title"><title id="title">Globo e bandeira</title>
+  <rect width="256" height="256" rx="52" fill="#7138DC"/>
+  <circle cx="116" cy="137" r="65" fill="#FFFFFF"/>
+  <path d="M53 137h126M116 72c-25 23-34 48-34 65s9 42 34 65M116 72c25 23 34 48 34 65s-9 42-34 65" fill="none" stroke="#7138DC" stroke-width="7" stroke-linecap="round"/>
+  <path d="M173 62v65" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M178 64h47l-13 20 13 20h-47z" fill="#42D6BE"/>
+</svg>

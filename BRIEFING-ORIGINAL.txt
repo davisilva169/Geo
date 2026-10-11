@@ -1,0 +1,1033 @@
+# PROJETO: JOGO DE BANDEIRAS — TREINAMENTO PARA GEOGUESSR
+
+## 1. PAPEL E OBJETIVO
+
+Você atuará como uma equipe sênior multidisciplinar composta por:
+
+- Game designer especializado em jogos educacionais e arcade.
+- Desenvolvedor frontend sênior em React e TypeScript.
+- Especialista em UI/UX e design de jogos.
+- Diretor de arte digital.
+- Especialista em gamificação, memória e aprendizagem.
+- Engenheiro de software responsável por arquitetura, testes e publicação.
+
+**Objetivo:** desenvolver um jogo completo de treinamento geográfico, começando por bandeiras de países, que futuramente poderá receber outros módulos de geografia voltados ao GeoGuessr.
+
+O jogo deve ser visualmente encantador, rápido, fluido, intuitivo, responsivo e genuinamente divertido.
+
+Quero um produto bem-acabado, pronto para ser publicado gratuitamente no GitHub Pages, sem depender de servidores pagos.
+
+O idioma inicial será português do Brasil.
+
+**IMPORTANTE: NÃO COMECE PROGRAMANDO.**
+
+O desenvolvimento deve acontecer em fases obrigatórias. A primeira é exclusivamente de direção de arte, prototipagem visual e planejamento. Somente implemente o jogo quando eu aprovar uma das propostas visuais.
+
+---
+
+# 2. ETAPA 1 — IDENTIDADE VISUAL (OBRIGATÓRIA)
+
+Antes de escrever código, apresente quatro propostas de identidade visual distintas para o jogo.
+
+Todas devem respeitar estas características:
+
+- Tema claro, preferencialmente.
+- Interface minimalista, porém colorida.
+- Aparência de jogo moderno, não de aplicativo corporativo.
+- Tipografia refinada e excelente legibilidade.
+- Cards com cantos arredondados.
+- Sombras suaves e profundidade moderada.
+- Animações elegantes e feedback visual agradável.
+- Boa utilização de espaços vazios.
+- Elementos visuais com personalidade.
+- Interface funcional em desktop e celular.
+- Coerência entre todos os minigames.
+
+As quatro direções devem ser:
+
+1. **Playful Minimal:** minimalismo alegre, cores vivas moderadas e elementos arredondados.
+2. **Arcade Soft:** interface com personalidade de arcade, efeitos refinados, cores e sensação de dinamismo.
+3. **Editorial Geography:** estética sofisticada, elementos inspirados em mapas, atlas modernos e visualização geográfica.
+4. **Cozy Explorer:** estética acolhedora, com elementos ilustrados, pequenas mascotes e sensação de exploração.
+
+Para cada direção, gere imagens originais que mostrem:
+
+- Tela inicial do jogo.
+- Menu de seleção dos modos.
+- Tela de flashcards.
+- Tela do Avalanche.
+- Tela de resultados e estatísticas.
+
+Também apresente a paleta de cores, fontes recomendadas, estilo de ícones, botões, animações e possíveis mascotes.
+
+As imagens devem representar interfaces plausíveis e implementáveis, não apenas arte conceitual abstrata.
+
+Caso o ambiente não permita gerar imagens diretamente, indique essa limitação e proponha um procedimento adequado para obter mockups visuais. Não substitua silenciosamente imagens solicitadas por descrições textuais.
+
+**PARE NESTA ETAPA E AGUARDE MINHA ESCOLHA.**
+
+Não comece a implementação até eu escolher a identidade visual.
+
+---
+
+# 3. CONCEITO GERAL DO JOGO
+
+O jogo terá inicialmente três modos:
+
+1. NORMAL — Aprendizado e revisão.
+2. AVALANCHE — Sobrevivência e reflexos.
+3. RADAR — Reconhecimento visual rápido.
+
+Os três modos devem compartilhar:
+
+- Banco de dados de países.
+- Sistema de estatísticas.
+- Histórico de partidas.
+- Registro de acertos e erros.
+- Sistema de progressão.
+- Conquistas.
+- Preferências do jogador.
+
+O desempenho nos três modos deve alimentar um sistema centralizado de aprendizado.
+
+Exemplo: se o jogador confundir constantemente Chade com Romênia, o jogo deve registrar essa dificuldade e utilizá-la nas revisões e na criação de alternativas plausíveis.
+
+O foco principal é aprender as 196 bandeiras com eficiência e diversão.
+
+---
+
+# 4. BASE DE DADOS — 196 BANDEIRAS
+
+Referência:
+
+https://www.jetpunk.com/user-quizzes/176134/bandeiras-do-mundo
+
+O jogo deve contemplar exatamente os 196 países utilizados na referência, após conferência.
+
+Não presumir que a lista corresponde automaticamente a todos os Estados reconhecidos pela ONU.
+
+Pesquise e documente a convenção utilizada pelo quiz, incluindo eventuais casos como Taiwan, Kosovo, Palestina e Vaticano.
+
+Se a referência estiver inacessível, utilize fontes confiáveis e apresente uma lista para validação antes de afirmar equivalência exata.
+
+Cada país deve possuir uma estrutura semelhante a:
+
+- ID permanente.
+- Nome em português brasileiro.
+- Nomes alternativos aceitos.
+- Código ISO, quando aplicável.
+- Região geográfica.
+- Continente.
+- Imagem SVG da bandeira.
+- Países visualmente semelhantes.
+- Nível de dificuldade inicial estimado.
+- Informações auxiliares opcionais.
+
+Utilize fontes de bandeiras com licenças adequadas para redistribuição e publicação pública. Registre as fontes e atribuições exigidas.
+
+As imagens devem ser armazenadas localmente no projeto ou disponibilizadas por um mecanismo que não comprometa a experiência offline.
+
+Não utilize imagens geradas por IA como fonte das bandeiras oficiais, pois suas proporções e símbolos devem ser corretos.
+
+A resolução, orientação e proporções oficiais devem ser preservadas.
+
+O jogo precisa funcionar sem conexão após o carregamento e instalação dos recursos necessários, quando tecnicamente viável.
+
+---
+
+# 5. MODO 1 — NORMAL
+
+Este é o principal modo de aprendizagem.
+
+## 5.1 Formatos de perguntas
+
+O jogador pode escolher entre quatro formatos:
+
+**A. Bandeira → Digitação**
+
+Uma bandeira aparece e o jogador precisa digitar o país correspondente.
+
+- Campo de resposta com foco automático.
+- Enter confirma.
+- Nomes alternativos aceitos.
+- Acentos e diferenças simples de capitalização não devem impedir acertos.
+- Não aceitar automaticamente países diferentes por semelhança textual.
+- Tratamento cuidadoso de erros de digitação, sem facilitar demais.
+- Opção de revelar a resposta, contando como erro.
+
+**B. Bandeira → Quatro nomes**
+
+Uma bandeira aparece acompanhada de quatro opções de países.
+
+- Uma correta.
+- Três incorretas.
+- Alternativas inteligentes, incluindo países visualmente semelhantes quando possível.
+- Posição correta aleatória, sem viés.
+- Feedback imediato.
+
+**C. Nome → Quatro bandeiras**
+
+O nome do país aparece e o jogador seleciona uma entre quatro bandeiras.
+
+- Bandeiras grandes e facilmente distinguíveis.
+- Interface responsiva.
+- Alternativas difíceis progressivamente.
+
+**D. Misto**
+
+Alternância entre os três formatos anteriores, com distribuição configurável.
+
+## 5.2 Seleção de perguntas
+
+O jogador pode escolher:
+
+- Todos os 196 países.
+- Apenas países nunca estudados.
+- Apenas erros da última sessão completa.
+- Apenas erros da sessão anterior.
+- Todos os países com erros pendentes.
+- Países difíceis segundo o histórico.
+- Apenas um continente.
+- Sessão personalizada com 10, 20, 50, 100 ou 196 bandeiras.
+- Revisão inteligente.
+
+## 5.3 Ciclo de aprendizado
+
+Este recurso é prioritário.
+
+O jogador começa uma sessão com todas as 196 bandeiras.
+
+Suponha que acerte 120 e erre 76.
+
+Ao terminar, o jogo deve apresentar:
+
+- 120 acertos.
+- 76 erros.
+- Porcentagem de acertos.
+- Lista dos países errados.
+- Tempo total.
+- Tempo médio por resposta.
+- Comparação com resultados anteriores.
+
+Em seguida, oferecer:
+
+**REVISAR OS 76 ERROS**
+
+Uma nova sessão é iniciada exclusivamente com os 76 países errados.
+
+Se acertar 60 e errar 16, oferecer nova revisão com apenas os 16 restantes.
+
+O ciclo continua até zerar os erros.
+
+O sistema deve armazenar separadamente:
+
+- Resultados de sessões completas.
+- Resultados das sessões de revisão.
+- Dificuldades ainda não superadas.
+- Quantidade de repetições necessárias para aprender cada país.
+
+Muito importante: concluir uma revisão não deve apagar o histórico da dificuldade.
+
+Um país anteriormente difícil deve continuar recebendo revisões periódicas para verificar retenção.
+
+## 5.4 Progresso e domínio
+
+Criar um sistema de domínio por país.
+
+Estados sugeridos:
+
+- Não estudado.
+- Iniciante.
+- Em aprendizado.
+- Familiar.
+- Dominado.
+
+O domínio deve considerar:
+
+- Acertos.
+- Erros.
+- Acertos recentes.
+- Tempo de resposta.
+- Repetição da dificuldade.
+- Tempo desde a última revisão.
+
+Evitar métricas arbitrárias ou enganosas: documente a fórmula utilizada.
+
+Implementar repetição espaçada simplificada, com revisões futuras e possibilidade de ajustar o algoritmo.
+
+## 5.5 Interface do Normal
+
+A tela deve ter:
+
+- Bandeira em destaque.
+- Número da questão.
+- Barra de progresso.
+- Pontuação e taxa de acerto.
+- Campo ou opções de resposta.
+- Feedback animado.
+- Botão de pausa.
+- Opção de abandonar com confirmação.
+- Acessibilidade por teclado.
+- Possibilidade de pular, contando como erro.
+
+Após responder incorretamente, mostrar a resposta correta e, quando relevante, o país com o qual foi confundido.
+
+---
+
+# 6. MODO 2 — AVALANCHE
+
+Este deve ser o modo arcade mais divertido do projeto.
+
+## 6.1 Mecânica central
+
+Bandeiras caem verticalmente pela tela.
+
+O jogador precisa identificar cada uma antes que atinja o chão.
+
+O modo principal será de digitação.
+
+Cada bandeira possui:
+
+- Identificador único.
+- País associado.
+- Posição horizontal.
+- Posição vertical.
+- Velocidade.
+- Estado de animação.
+- Momento de surgimento.
+
+Quando o jogador digita corretamente o nome de um país presente na tela, a bandeira correspondente é eliminada com uma animação satisfatória.
+
+Se houver duas bandeiras do mesmo país, definir uma regra consistente: preferencialmente eliminar a que está mais próxima do chão.
+
+O jogador perde uma vida sempre que uma bandeira não resolvida toca o chão.
+
+## 6.2 Configurações
+
+Permitir configurar:
+
+- 1, 3, 5 ou 10 vidas.
+- Velocidade inicial.
+- Dificuldade.
+- Todas as bandeiras ou subconjuntos.
+- Com ou sem poderes.
+- Efeitos sonoros.
+- Duração máxima opcional.
+
+Oferecer presets:
+
+- Relaxado.
+- Normal.
+- Difícil.
+- Insano.
+- Personalizado.
+
+Os recordes devem ser separados por configurações e presets relevantes, evitando comparar partidas com vantagens diferentes.
+
+## 6.3 Dificuldade progressiva
+
+O jogo começa com uma bandeira por vez.
+
+Com o avanço da sessão:
+
+- A velocidade aumenta gradualmente.
+- O intervalo entre surgimentos diminui.
+- Mais bandeiras podem coexistir.
+- Países mais difíceis tornam-se frequentes.
+- Podem surgir ondas de bandeiras visualmente semelhantes.
+
+A progressão precisa ser balanceada e documentada, com limites para evitar situações matematicamente impossíveis.
+
+Usar um mecanismo de geração que considere quantas bandeiras já estão na tela, sua velocidade e o tempo mínimo necessário para responder.
+
+## 6.4 Sistema de combos
+
+Acertos consecutivos alimentam um combo.
+
+Sugestão:
+
+- 3 acertos: combo inicial.
+- 5 acertos: bônus de pontos.
+- 10 acertos: multiplicador especial.
+- 20 acertos: efeito visual de sequência perfeita.
+
+O sistema pode aumentar pontuações e habilitar recompensas.
+
+O combo é interrompido quando uma bandeira atinge o chão ou quando o jogador comete um erro, segundo regra escolhida e explicada.
+
+## 6.5 Sistema de poderes e bônus
+
+Implementar poderes visualmente distintos e divertidos.
+
+**Vida extra**
+
+Após determinada sequência de acertos, o jogador pode recuperar uma vida, respeitando o limite de vidas definido.
+
+**Congelar**
+
+Interrompe temporariamente o movimento das bandeiras.
+
+**Câmera lenta**
+
+Diminui a velocidade de queda por alguns segundos.
+
+**Escudo**
+
+Protege contra uma bandeira perdida.
+
+**Limpeza**
+
+Elimina automaticamente uma bandeira crítica, com pontuação reduzida.
+
+**Raio-X**
+
+Mostra brevemente dicas ou nomes das bandeiras em tela.
+
+Os poderes devem ter:
+
+- Ícones próprios.
+- Animações claras.
+- Indicadores de duração.
+- Atalhos de teclado.
+- Limites de utilização.
+- Regras de desbloqueio balanceadas.
+
+Não permitir acumulação infinita de benefícios.
+
+## 6.6 Eventos especiais
+
+Criar eventos ocasionais:
+
+**Tempestade**
+
+Uma sequência de bandeiras cai com maior frequência durante um intervalo curto.
+
+**Duplas Perigosas**
+
+Bandeiras muito semelhantes aparecem próximas umas das outras.
+
+**Momento Zen**
+
+A velocidade diminui, permitindo recuperação.
+
+**Bônus de Precisão**
+
+Uma janela de tempo recompensa acertos sem erros.
+
+**Desafio Regional**
+
+Durante alguns segundos, as novas bandeiras pertencem a uma mesma região.
+
+Eventos devem ser apresentados com transições animadas e mensagens discretas, nunca interrompendo a digitação.
+
+## 6.7 Pontuação
+
+A pontuação deve combinar:
+
+- Acerto básico.
+- Rapidez.
+- Combo.
+- Dificuldade do país.
+- Bônus de eventos.
+
+A fórmula precisa ser explícita, determinística e testável.
+
+Evitar recompensas que incentivem estratégias contrárias ao aprendizado.
+
+## 6.8 Controles e jogabilidade
+
+Desktop:
+
+- Digitação contínua.
+- Enter opcional para confirmar.
+- Teclas numéricas para poderes.
+- Espaço ou Esc para pausar, sem atrapalhar digitação.
+- Campo de texto permanentemente acessível.
+
+Mobile:
+
+- Interface adaptada para teclado virtual.
+- Elementos críticos afastados do teclado.
+- Poderes acessíveis por toque.
+- Ajuste de velocidade para compensar as diferenças de entrada.
+- Possibilidade de usar uma variante com múltipla escolha rápida.
+
+## 6.9 Condições de fim de jogo
+
+Ao perder todas as vidas, apresentar:
+
+- Pontuação.
+- Tempo de sobrevivência.
+- Total de bandeiras identificadas.
+- Precisão.
+- Maior combo.
+- Velocidade máxima atingida.
+- Bandeiras não reconhecidas.
+- Novo recorde, quando aplicável.
+
+Oferecer:
+
+- Jogar novamente.
+- Revisar países errados.
+- Comparar com recorde anterior.
+- Voltar ao menu.
+
+## 6.10 Sensação de jogo
+
+O Avalanche deve ter:
+
+- Física de movimento suave.
+- Animações de eliminação.
+- Pequenas partículas.
+- Feedback de combo.
+- Efeitos sonoros opcionais.
+- Vibração opcional em dispositivos compatíveis.
+- Transições sem travamentos.
+- Possibilidade de reduzir movimento.
+
+Não transformar o jogo em um espetáculo visual confuso.
+
+O jogador precisa conseguir identificar claramente todas as bandeiras durante a queda.
+
+---
+
+# 7. MODO 3 — RADAR
+
+O Radar deve ser um modo de reconhecimento visual rápido.
+
+## 7.1 Mecânica
+
+O jogo exibe o nome de um país.
+
+Abaixo aparece uma grade contendo múltiplas bandeiras.
+
+O jogador precisa localizar e selecionar a bandeira correta o mais rapidamente possível.
+
+Exemplo:
+
+ENCONTRE: CHADE
+
+O painel apresenta 12 bandeiras, incluindo Romênia, Andorra, Moldávia e outras.
+
+Apenas uma corresponde à resposta.
+
+## 7.2 Dificuldades
+
+- Fácil: 4 bandeiras.
+- Normal: 9 bandeiras.
+- Difícil: 16 bandeiras.
+- Especialista: 25 bandeiras, respeitando espaço e tamanho mínimos.
+
+No celular, adaptar a quantidade ou permitir rolagem sem comprometer o tempo de resposta.
+
+## 7.3 Mecânicas
+
+- Limite de tempo configurável.
+- Bônus por rapidez.
+- Combo de acertos.
+- Penalidade por selecionar incorretamente.
+- Progressão gradual.
+- Fases com bandeiras visualmente semelhantes.
+- Modo infinito.
+- Sessões de 10, 25 ou 50 rodadas.
+
+## 7.4 Eventos
+
+**Espelho:** apresentar uma sequência particularmente difícil de bandeiras parecidas, sem modificar o desenho oficial das bandeiras.
+
+**Caça Rápida:** encontrar cinco bandeiras sucessivas sob um cronômetro.
+
+**Memória:** visualizar brevemente uma grade, ocultá-la e selecionar a posição da bandeira pedida.
+
+A variante Memória pode ser uma configuração adicional, desde que mantenha qualidade e clareza.
+
+## 7.5 Resultados
+
+Registrar:
+
+- Acertos e erros.
+- Tempo médio de reconhecimento.
+- Países mais demorados.
+- Confusões recorrentes.
+- Melhor sequência.
+- Evolução histórica.
+
+O Radar deve complementar o Normal, treinando reconhecimento rápido e diferenciação visual.
+
+---
+
+# 8. SISTEMA GLOBAL DE PROGRESSÃO
+
+Construir uma seção chamada "Meu Progresso".
+
+Ela deve apresentar métricas realmente úteis para o aprendizado.
+
+## Painel principal
+
+- Total de países estudados.
+- Total de países dominados.
+- Precisão global.
+- Precisão recente.
+- Países com maior dificuldade.
+- Revisões pendentes.
+- Total de partidas.
+- Tempo total de prática.
+- Evolução semanal e mensal.
+
+## Gráficos
+
+Criar visualizações interativas de:
+
+- Precisão ao longo do tempo.
+- Domínio por continente.
+- Quantidade de países dominados.
+- Erros mais frequentes.
+- Tempo médio por resposta.
+- Evolução no Avalanche.
+- Evolução no Radar.
+
+Os gráficos devem distinguir sessões completas de sessões de revisão para que as estatísticas não sejam enganosas.
+
+## Matriz de conhecimento
+
+Criar uma visualização com os 196 países.
+
+Cada um terá uma cor conforme o domínio atual.
+
+Ao clicar em um país, mostrar:
+
+- Bandeira.
+- Nome.
+- Histórico de acertos.
+- Histórico de erros.
+- Última revisão.
+- Taxa de acerto.
+- Tempo médio de resposta.
+- Confusões mais frequentes.
+
+Adicionar filtros por continente e domínio.
+
+---
+
+# 9. GAMIFICAÇÃO E CONQUISTAS
+
+Implementar conquistas como:
+
+- Primeira bandeira identificada.
+- Primeiras 10 bandeiras.
+- 50 países estudados.
+- 100 países dominados.
+- 196 países dominados.
+- Primeira revisão zerada.
+- 10 acertos consecutivos.
+- 50 acertos consecutivos.
+- Sobreviver cinco minutos no Avalanche.
+- Completar um desafio Radar sem erros.
+- Dominar todas as bandeiras de um continente.
+
+Criar um sistema de XP e níveis com progresso persistente.
+
+O XP deve incentivar frequência e aprendizado, sem incentivar repetição artificial de partidas fáceis.
+
+As conquistas devem aparecer com animações discretas e agradáveis.
+
+Criar também desafios pessoais opcionais e metas diárias.
+
+Não implementar mecânicas punitivas de retenção que façam o jogador se sentir obrigado a jogar.
+
+---
+
+# 10. TELAS DO PRODUTO
+
+Planejar e implementar:
+
+**1. Página inicial**
+
+- Identidade visual do jogo.
+- Mensagem de boas-vindas.
+- Três cards dos modos principais.
+- Progresso geral.
+- Acesso rápido para continuar revisão.
+- Botão de configurações.
+
+**2. Seleção do Normal**
+
+Escolha do tipo de pergunta, conjunto de países e tamanho da sessão.
+
+**3. Jogo Normal**
+
+Tela focada no aprendizado, com excelente legibilidade.
+
+**4. Resultados Normal**
+
+Estatísticas e opções de revisão.
+
+**5. Configuração do Avalanche**
+
+Seleção de dificuldade, vidas e bônus.
+
+**6. Jogo Avalanche**
+
+Área de jogo com excelente desempenho.
+
+**7. Resultados Avalanche**
+
+Recordes, estatísticas e revisão.
+
+**8. Configuração do Radar**
+
+Seleção de dificuldade e duração.
+
+**9. Jogo Radar**
+
+Grade interativa de bandeiras.
+
+**10. Resultados Radar**
+
+Desempenho, recordes e confusões.
+
+**11. Meu Progresso**
+
+Painel estatístico.
+
+**12. Coleção de Bandeiras**
+
+Catálogo pesquisável das 196 bandeiras.
+
+**13. Conquistas**
+
+Conquistas desbloqueadas e pendentes.
+
+**14. Configurações**
+
+Som, movimento, idioma, acessibilidade e dados locais.
+
+**15. Ajuda**
+
+Instruções completas e acessíveis dos modos.
+
+---
+
+# 11. PERSONALIZAÇÃO
+
+Permitir ajustar:
+
+- Volume dos efeitos.
+- Música, se implementada.
+- Ativar/desativar animações intensas.
+- Tema claro e escuro, com claro como padrão.
+- Velocidade de transições.
+- Nomes alternativos aceitos.
+- Preferência de tipo de pergunta.
+- Preferências individuais dos minigames.
+
+Criar persistência local de todas as preferências.
+
+---
+
+# 12. DESIGN SYSTEM
+
+Desenvolver componentes reutilizáveis.
+
+Exemplos:
+
+- Botões.
+- Cards.
+- Modais.
+- Barras de progresso.
+- Indicadores de vidas.
+- Indicadores de combo.
+- Campos de digitação.
+- Bandeiras.
+- Gráficos.
+- Tooltips.
+- Toasts.
+- Seletores.
+- Telas de resultado.
+- Componentes de conquistas.
+
+Utilizar cores semânticas consistentes.
+
+Evitar depender apenas de cores para indicar acertos e erros.
+
+Estabelecer padrões de espaçamento, tamanhos, tipografia e animações.
+
+A aparência final deve ser tão boa quanto os mockups aprovados.
+
+---
+
+# 13. ARQUITETURA TÉCNICA
+
+Tecnologias preferenciais:
+
+- React.
+- TypeScript.
+- Vite.
+- Tailwind CSS.
+- Biblioteca de componentes acessíveis, quando apropriado.
+- Lucide para ícones.
+- Biblioteca de animação leve, quando justificada.
+- Recharts ou equivalente para estatísticas.
+- Vitest para testes.
+- Playwright para testes de interface, quando viável.
+
+Para o Avalanche, selecionar conscientemente entre Canvas 2D e elementos DOM.
+
+Justificar a escolha considerando desempenho, legibilidade, digitação, adaptação mobile e manutenção.
+
+A lógica de jogo deve ficar separada da renderização.
+
+Utilizar `requestAnimationFrame` e movimento independente da taxa de quadros.
+
+Tratar corretamente pausa, retorno à aba, redimensionamento, desmontagem de componentes e perda de foco.
+
+A arquitetura precisa ser modular, permitindo adicionar futuros módulos como capitais, países, mapas e pistas do GeoGuessr.
+
+---
+
+# 14. ARMAZENAMENTO E DADOS
+
+O jogo deve funcionar inicialmente sem login.
+
+Utilizar IndexedDB para histórico e estatísticas, com biblioteca auxiliar se necessário.
+
+Separar claramente:
+
+- Banco estático de países.
+- Preferências.
+- Histórico de sessões.
+- Estatísticas agregadas.
+- Domínio por país.
+- Recordes.
+- Conquistas.
+
+O sistema deve suportar:
+
+- Persistência entre sessões.
+- Versionamento e migração de dados.
+- Exportação em JSON.
+- Importação de backup.
+- Restauração de dados.
+- Exclusão de progresso mediante confirmação.
+
+Evitar que atualizar o jogo apague o progresso existente.
+
+Não utilizar um backend obrigatório nem armazenar dados pessoais desnecessários.
+
+---
+
+# 15. PUBLICAÇÃO NO GITHUB
+
+O repositório deve estar pronto para publicação desde o início.
+
+Incluir:
+
+- README.md profissional.
+- Instruções de instalação.
+- Scripts de desenvolvimento e build.
+- Licença do código.
+- Créditos e licenças dos recursos visuais.
+- Estrutura clara de diretórios.
+- Arquivo de configuração.
+- GitHub Actions para deployment.
+- Tratamento de caminhos para GitHub Pages.
+- Instruções para publicar e atualizar.
+- Documentação das mecânicas de jogo.
+- Arquivo de planejamento de funcionalidades futuras.
+
+O jogo deverá funcionar no endereço:
+
+`https://USUARIO.github.io/NOME-DO-REPOSITORIO/`
+
+Configurar corretamente a base do Vite e o sistema de rotas para esse cenário.
+
+Não incluir arquivos temporários, chaves privadas, segredos ou dependências desnecessárias no repositório.
+
+Não afirmar que o jogo está publicado sem verificar efetivamente a publicação.
+
+---
+
+# 16. QUALIDADE E TESTES
+
+O produto precisa ser funcional de verdade, não apenas uma demonstração visual.
+
+Criar testes para:
+
+- Carregamento das 196 bandeiras.
+- Identificadores únicos.
+- Integridade de imagens e associações.
+- Correspondência entre países e respostas.
+- Normalização de respostas digitadas.
+- Geração de quatro alternativas distintas.
+- Revisão de erros.
+- Persistência entre sessões.
+- Evolução de domínio.
+- Cálculo de pontuação.
+- Progressão de dificuldade.
+- Sistema de vidas.
+- Pausa e retomada.
+- Game over.
+- Conquistas.
+- Importação e exportação.
+- Responsividade.
+
+Casos críticos:
+
+- O usuário fecha o navegador durante a sessão.
+- O usuário recarrega a página.
+- O usuário perde o foco da aba durante o Avalanche.
+- Uma bandeira é acertada exatamente ao tocar o chão.
+- Duas bandeiras do mesmo país estão caindo.
+- Uma resposta contém acentos ou espaços extras.
+- O jogador erra todas as 196 bandeiras.
+- O jogador acerta todas as 196.
+- Não existem mais erros para revisar.
+- O navegador está sem internet.
+
+Fazer testes manuais de todas as telas e interações.
+
+Não usar dados fictícios em dashboards finais, exceto em um ambiente de demonstração claramente identificado.
+
+---
+
+# 17. DESEMPENHO E ACESSIBILIDADE
+
+O jogo deve ser otimizado para desktop e mobile.
+
+Prioridades:
+
+- Carregamento inicial rápido.
+- Recursos visuais otimizados.
+- Renderização suave.
+- Memória controlada.
+- Layout sem deslocamentos inesperados.
+- Teclado funcional.
+- Controles por toque.
+- Contraste adequado.
+- Indicadores de foco visíveis.
+- Textos acessíveis.
+- Preferência por movimento reduzido respeitada.
+- Nenhum efeito visual deve impedir a identificação correta de uma bandeira.
+
+Animações devem contribuir para a experiência, não apenas decorar.
+
+---
+
+# 18. PLANO DE IMPLEMENTAÇÃO
+
+Após a aprovação da identidade visual, desenvolver em etapas verificáveis.
+
+**Fase A — Fundação**
+
+- Estrutura de projeto.
+- Design system.
+- Banco de países.
+- Validação das bandeiras.
+- Persistência.
+- Navegação.
+
+**Fase B — Normal**
+
+- Todos os formatos de perguntas.
+- Sessões completas.
+- Revisão iterativa.
+- Estatísticas.
+- Testes.
+
+**Fase C — Avalanche**
+
+- Motor de jogo.
+- Digitação.
+- Colisões.
+- Velocidade progressiva.
+- Vidas.
+- Combos.
+- Poderes.
+- Eventos.
+- Testes e balanceamento.
+
+**Fase D — Radar**
+
+- Grades.
+- Dificuldade.
+- Combos.
+- Temporizador.
+- Resultados.
+- Testes.
+
+**Fase E — Progresso**
+
+- Dashboard.
+- Histórico.
+- Domínio.
+- Conquistas.
+- Revisão inteligente.
+
+**Fase F — Polimento**
+
+- Animações.
+- Efeitos sonoros.
+- Responsividade.
+- Acessibilidade.
+- Ajustes visuais.
+
+**Fase G — Publicação**
+
+- Build de produção.
+- Testes finais.
+- Documentação.
+- GitHub Actions.
+- Publicação.
+- Verificação do site.
+
+Cada fase deve terminar com funcionalidades reais, testáveis e integradas.
+
+Não implementar recursos falsos ou deixar botões decorativos sem função.
+
+Se uma funcionalidade estiver incompleta, declarar explicitamente.
+
+---
+
+# 19. CRITÉRIOS DE ACEITAÇÃO
+
+O projeto somente será considerado completo quando:
+
+1. As 196 bandeiras estiverem disponíveis e corretamente associadas.
+2. Todos os formatos do Normal funcionarem.
+3. O ciclo de revisão dos erros funcionar indefinidamente, até zerar.
+4. As estatísticas persistirem após fechar e reabrir a página.
+5. O Avalanche for jogável com dificuldade progressiva.
+6. Vidas, combos e bônus do Avalanche funcionarem corretamente.
+7. O Radar funcionar em todas as dificuldades.
+8. Os três modos alimentarem as estatísticas centrais.
+9. O jogador puder exportar e importar seus dados.
+10. Todos os menus e botões tiverem comportamento funcional.
+11. A interface se adaptar ao celular.
+12. Não existirem erros críticos de execução.
+13. Os testes passarem e o build de produção funcionar.
+14. O projeto estiver preparado para publicação pública.
+15. O produto final respeitar a direção visual aprovada.
+
+---
+
+# 20. O QUE EU QUERO AGORA
+
+Neste momento, execute SOMENTE A ETAPA 1.
+
+Quero receber:
+
+1. Sugestões de nomes criativos para o jogo.
+2. Quatro propostas de direção de arte.
+3. Imagens originais das interfaces de cada proposta, de preferência organizadas para comparação.
+4. Paletas de cores.
+5. Tipografia e estilo de componentes.
+6. Recomendações de animações e efeitos.
+7. Avaliação das vantagens e desvantagens de cada estilo.
+8. Sua escolha recomendada e justificativa.
+9. Um plano técnico resumido com arquitetura e ordem de desenvolvimento.
+
+Não escreva código do jogo ainda.
+
+Não inicie o desenvolvimento das fases seguintes sem minha aprovação visual.
+
+**A prioridade é construir um jogo completo, bonito, tecnicamente sólido e genuinamente divertido — um produto que eu teria orgulho de publicar no GitHub e utilizar diariamente para treinar para o GeoGuessr.**

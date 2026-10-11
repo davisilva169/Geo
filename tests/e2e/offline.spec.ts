@@ -1,0 +1,21 @@
+import {test,expect} from '@playwright/test';
+test('produção: cache completo, 196 imagens e partida sem conexão',async({page,context})=>{
+ test.skip(!process.env.OFFLINE_TEST,'Executar com o build de produção e OFFLINE_TEST=1.');
+ test.setTimeout(90000);
+ await page.goto('/');
+ await expect(page.getByRole('heading',{name:/O mundo é grande/})).toBeVisible();
+ await page.evaluate(async()=>{await navigator.serviceWorker.ready;if(!navigator.serviceWorker.controller)await new Promise<void>(resolve=>navigator.serviceWorker.addEventListener('controllerchange',()=>resolve(),{once:true}));});
+ await context.setOffline(true);
+ await page.reload();
+ await expect(page.getByRole('heading',{name:/O mundo é grande/})).toBeVisible();
+ await page.goto('/#/collection');await expect(page.locator('.country-card')).toHaveCount(196);
+ await expect.poll(()=>page.locator('.country-card img').evaluateAll(images=>images.every(img=>(img as HTMLImageElement).complete&&(img as HTMLImageElement).naturalWidth>0))).toBe(true);
+ await page.goto('/#/setup/normal');
+ await page.getByRole('button',{name:'Começar partida',exact:true}).click();
+ await page.getByRole('button',{name:'Revelar resposta'}).click();
+ await expect(page.locator('.feedback.bad')).toBeVisible();
+ await page.reload();
+ await expect(page.locator('.feedback.bad')).toBeVisible();
+ await page.getByRole('button',{name:'Próxima',exact:true}).click();
+ await expect(page.locator('.question-status strong')).toHaveText('2');
+});

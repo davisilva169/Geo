@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+    <title id="title">Olho marinho com globo e marcador</title>
+    <defs><clipPath id="globe"><circle r="100"/></clipPath></defs>
+    <rect width="256" height="256" rx="50" fill="#F7F9F5"/>
+    <path d="M26 128c28-42 65-64 102-64s74 22 102 64c-28 42-65 64-102 64S54 170 26 128z" fill="#FFFFFF" stroke="#173F52" stroke-width="11" stroke-linejoin="round"/>
+
+    <circle cx="128" cy="128" r="49" fill="#3B9FD8"/>
+    <g transform="translate(128 128) scale(.49)" clip-path="url(#globe)" fill="#5BC985">
+      <path d="M-96-41c20-24 43-26 65-22l15 19-21 13-3 19-20 14-9 25-20-15-15-23z"/>
+      <path d="M-56 13c17-13 37-12 47 2l-8 22-14 18-9 30-16 11-11-27 9-27z"/>
+      <path d="M-3-68c30-20 66-19 91 4l13 31-25 10-17-13-22 9-18 17-29-14-17-19z"/>
+      <path d="M16-12c23-10 43 3 44 23L43 57 20 76 3 38 2 8z"/>
+    </g>
+      <g transform="translate(155 98) scale(0.22)">
+    <path d="M0-56c-25 0-45 19-45 44 0 28 27 56 45 76 18-20 45-48 45-76 0-25-20-44-45-44z" fill="#F28660"/>
+    <circle cy="-12" r="15" fill="#FFFFFF"/>
+  </g>
+  </svg>
